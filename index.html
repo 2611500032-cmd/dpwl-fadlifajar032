@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Absensi Mahasiswa - Institut Sains dan Bisnis Atma Luhur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container header-isi">
+      <a href="index.html" class="logo">Absensi <span>Mahasiswa</span></a>
+
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger" aria-label="Buka menu">&#9776;</label>
+
+      <nav>
+        <ul>
+          <li><a href="#beranda" class="aktif">Beranda</a></li>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="buku-tamu.html">Buku Tamu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== BERANDA ===== -->
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div>
+          <h1>Absensi mahasiswa</h1>
+          <p>Sistem absensi mahasiswa Institut Sains dan Bisnis Atma Luhur. Catat kehadiran kuliah, lihat rekapnya, dan ajukan izin dengan mudah.</p>
+          <a href="#layanan" class="tombol">Lihat Layanan</a>
+          <a href="buku-tamu.html" class="tombol garis">Isi Buku Tamu</a>
+        </div>
+
+        <aside class="kartu-absen" aria-label="Informasi kuliah hari ini">
+          <h2>Kuliah hari ini</h2>
+          <div class="jam" id="jam">--:--:--</div>
+          <div class="tgl" id="tanggal">Memuat tanggal...</div>
+          <dl>
+            <dt>Mata kuliah</dt><dd>Pemrograman Web</dd>
+            <dt>Dosen</dt><dd>Sujono, S.Kom</dd>
+            <dt>Jenjang</dt><dd>S1</dd>
+            <dt>Jurusan</dt><dd>TI/PTI</dd>
+            <dt>Semester</dt><dd>Ganjil 2025/2026</dd>
+          </dl>
+          <a href="buku-tamu.html" class="tombol">Isi Buku Tamu</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== TENTANG KAMI ===== -->
+    <section id="tentang">
+      <div class="container tentang-grid">
+        <img src="../UTS-PW-NIM-Absensi/images/absen.jpg" alt="Mahasiswa mengikuti perkuliahan di kelas">
+        <div>
+          <h2>Tentang Kami</h2>
+          <p>Absensi Mahasiswa adalah website pencatatan kehadiran perkuliahan di Institut Sains dan Bisnis Atma Luhur, dibuat untuk jenjang S1 Jurusan TI/PTI.</p>
+          <p>Tujuannya sederhana: kehadiran tercatat jelas, mahasiswa dapat memantau rekapnya, dan dosen tidak perlu menghitung manual.</p>
+          <ol class="langkah">
+            <li>Datang ke kelas sesuai jadwal perkuliahan.</li>
+            <li>Catat kehadiran pada sistem absensi.</li>
+            <li>Pantau rekap kehadiran Anda kapan saja.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LAYANAN ===== -->
+    <section id="layanan">
+      <div class="container">
+        <h2>Layanan Kami</h2>
+        <p class="sub-judul">Tiga layanan utama untuk mencatat dan memantau kehadiran kuliah.</p>
+
+        <div class="kartu-grid">
+          <article class="kartu">
+            <img src="../UTS-PW-NIM-Absensi/images/guru.jpg" alt="Mahasiswa mengisi daftar hadir">
+            <div class="kartu-isi">
+              <h3>Absensi Harian</h3>
+              <p>Catat kehadiran pada setiap pertemuan kuliah, lengkap dengan tanggal dan mata kuliah.</p>
+            </div>
+          </article>
+
+          <article class="kartu">
+            <img src="../UTS-PW-NIM-Absensi/images/mahasiswa.jpg" alt="Laporan rekap kehadiran">
+            <div class="kartu-isi">
+              <h3>Rekap Kehadiran</h3>
+              <p>Lihat ringkasan jumlah hadir, izin, sakit, dan alpa per mata kuliah dalam satu semester.</p>
+            </div>
+          </article>
+
+          <article class="kartu">
+            <img src="../UTS-PW-NIM-Absensi/images/izin.webp" alt="Pengajuan izin kuliah">
+            <div class="kartu-isi">
+              <h3>Pengajuan Izin</h3>
+              <p>Sampaikan izin atau keterangan sakit kepada dosen tanpa harus datang ke kampus.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERI ===== -->
+    <section id="galeri">
+      <div class="container">
+        <h2>Galeri</h2>
+        <p class="sub-judul">Suasana perkuliahan dan kegiatan mahasiswa.</p>
+
+        <div class="galeri-grid">
+          <img src="../UTS-PW-NIM-Absensi/images/gambar1.jpeg" alt="Ruang kelas perkuliahan">
+          <img src="../UTS-PW-NIM-Absensi/images/gambar2.jpeg" alt="Praktikum di laboratorium komputer">
+          <img src="../UTS-PW-NIM-Absensi/images/gambar3.jpeg" alt="Mahasiswa menulis kode program">
+          <img src="../UTS-PW-NIM-Absensi/images/gambar4.jpeg" alt="Diskusi kelompok mahasiswa">
+          <img src="../UTS-PW-NIM-Absensi/images/gambar5.jpeg" alt="Dosen menjelaskan materi">
+          <img src="../UTS-PW-NIM-Absensi/images/gambar6.jpeg" alt="Suasana kampus">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section id="kontak">
+      <div class="container kontak-grid">
+        <div class="info-kontak">
+          <h2>Kontak</h2>
+          <p class="sub-judul">Ada kendala dengan absensi? Hubungi kami.</p>
+          <p><strong>Instansi</strong>Institut Sains dan Bisnis Atma Luhur</p>
+          <p><strong>Email</strong>2611500032@mahasiswa.atmaluhur.ac.id</p>
+          <p><strong>Telepon</strong>0821-7764-3985</p>
+        </div>
+
+        <!-- Ganti 123 dengan 3 digit terakhir NIM -->
+        <form action="#" method="get">
+          <div>
+            <label for="nama123">Nama</label>
+            <input type="text" id="nama123" name="nama123" maxlength="50" required placeholder="Nama Anda">
+          </div>
+          <div>
+            <label for="email123">Email</label>
+            <input type="email" id="email123" name="email123" maxlength="60" required placeholder="nama@email.com">
+          </div>
+          <div>
+            <label for="pesan123">Pesan</label>
+            <textarea id="pesan123" name="pesan123" maxlength="300" required placeholder="Tulis pesan Anda"></textarea>
+          </div>
+          <button type="submit" class="tombol">Kirim</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-isi">
+        <span class="logo">Absensi <span style="color:var(--aksen)">Mahasiswa</span></span>
+        <ul class="sosmed">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+      <p class="hak-cipta">&copy; 2026 Institut Sains dan Bisnis Atma Luhur. UTS Pemrograman Web - Dosen: Sujono, S.Kom.</p>
+    </div>
+  </footer>
+
+  <!-- Jam dan tanggal hari ini pada kartu di Beranda -->
+  <script>
+    function perbaruiJam() {
+      var sekarang = new Date();
+      document.getElementById("jam").textContent = sekarang.toLocaleTimeString("id-ID", { hour12: false });
+      document.getElementById("tanggal").textContent = sekarang.toLocaleDateString("id-ID", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+      });
+    }
+    perbaruiJam();
+    setInterval(perbaruiJam, 1000);
+  </script>
+
+</body>
+</html>

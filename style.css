@@ -1,0 +1,204 @@
+/* =====================================================
+   UTS Pemrograman Web - style.css
+   Tema: Absensi Mahasiswa ISB Atma Luhur (ganti warna di bagian :root)
+   ===================================================== */
+
+:root {
+  --hijau-tua: #12285c;
+  --hijau-muda: #e3e9f6;
+  --kertas: #f6f8fc;
+  --aksen: #f2b705;
+  --aksen-gelap: #c99700;
+  --teks: #1b2233;
+  --teks-pudar: #56607a;
+  --putih: #ffffff;
+  --garis: #d3d9e8;
+  --radius: 10px;
+  --font-judul: "DM Serif Display", Georgia, serif;
+  --font-isi: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: var(--font-isi);
+  color: var(--teks);
+  background: var(--kertas);
+  line-height: 1.7;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+:focus-visible { outline: 3px solid var(--aksen); outline-offset: 2px; }
+
+.container { width: min(1100px, 92%); margin-inline: auto; }
+
+section { padding: 80px 0; }
+
+h1, h2, h3 { font-family: var(--font-judul); font-weight: 400; line-height: 1.2; }
+h2 { font-size: 2.2rem; color: var(--hijau-tua); margin-bottom: 8px; }
+
+.sub-judul { color: var(--teks-pudar); max-width: 60ch; margin-bottom: 40px; }
+
+/* ---------- HEADER ---------- */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--hijau-tua);
+  color: var(--putih);
+}
+.header-isi {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.logo { font-family: var(--font-judul); font-size: 1.6rem; }
+.logo span { color: var(--aksen); }
+
+nav ul { list-style: none; display: flex; gap: 6px; }
+nav a { display: block; padding: 8px 14px; border-radius: 6px; font-size: .95rem; }
+nav a:hover, nav a.aktif { background: rgba(255,255,255,.12); color: var(--aksen); }
+
+/* tombol menu mobile (tanpa JavaScript) */
+#menu-toggle { display: none; }
+.hamburger { display: none; cursor: pointer; font-size: 1.8rem; line-height: 1; }
+
+/* ---------- HERO / BERANDA ---------- */
+.hero {
+  min-height: 82vh; display: flex; align-items: center;
+  color: var(--putih); padding: 100px 0;
+  background:
+    linear-gradient(100deg, rgba(18,40,92,.92) 35%, rgba(18,40,92,.35)),
+    url("../UTS-PW-NIM-Absensi/images/logo.png") center/cover;
+}
+.hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); max-width: 14ch; margin-bottom: 18px; }
+.hero p { max-width: 48ch; font-size: 1.1rem; margin-bottom: 30px; color: #e3e9f6; }
+
+.tombol {
+  display: inline-block; padding: 12px 28px; border-radius: 50px; border: 0;
+  background: var(--aksen); color: var(--hijau-tua);
+  font: 700 1rem var(--font-isi); cursor: pointer; transition: background .2s;
+}
+.tombol:hover { background: var(--aksen-gelap); color: var(--putih); }
+.tombol.garis { background: transparent; border: 2px solid var(--putih); color: var(--putih); margin-left: 8px; }
+.tombol.garis:hover { background: var(--putih); color: var(--hijau-tua); }
+
+/* ---------- TENTANG KAMI ---------- */
+#tentang { background: var(--putih); }
+.tentang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.tentang-grid img { border-radius: var(--radius); width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.tentang-grid p { margin-bottom: 14px; color: var(--teks-pudar); }
+
+/* ---------- LAYANAN ---------- */
+#layanan { background: var(--hijau-muda); }
+.kartu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.kartu { background: var(--putih); border-radius: var(--radius); overflow: hidden; }
+.kartu img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+.kartu-isi { padding: 22px; }
+.kartu h3 { font-size: 1.4rem; color: var(--hijau-tua); margin-bottom: 6px; }
+.kartu p { color: var(--teks-pudar); font-size: .95rem; }
+
+/* ---------- GALERI ---------- */
+.galeri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.galeri-grid img {
+  width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius);
+  transition: transform .25s;
+}
+.galeri-grid img:hover { transform: scale(1.02); }
+
+/* ---------- KONTAK ---------- */
+#kontak { background: var(--putih); }
+.kontak-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; }
+.info-kontak p { margin-bottom: 18px; color: var(--teks-pudar); }
+.info-kontak strong { display: block; color: var(--hijau-tua); }
+
+/* ---------- FORMULIR (dipakai Kontak & Buku Tamu) ---------- */
+form { display: grid; gap: 16px; }
+label { font-weight: 700; font-size: .92rem; color: var(--hijau-tua); }
+label small { font-weight: 400; color: var(--teks-pudar); }
+input, textarea {
+  width: 100%; padding: 12px 14px; margin-top: 5px;
+  border: 1.5px solid var(--garis); border-radius: 8px;
+  font: 1rem var(--font-isi); background: var(--kertas); color: var(--teks);
+}
+input:focus, textarea:focus { outline: none; border-color: var(--hijau-tua); background: var(--putih); }
+input:invalid:not(:placeholder-shown), textarea:invalid:not(:placeholder-shown) { border-color: #c0392b; }
+textarea { resize: vertical; min-height: 130px; }
+form .tombol { justify-self: start; }
+
+/* ---------- HALAMAN BUKU TAMU ---------- */
+.halaman-judul { background: var(--hijau-tua); color: var(--putih); padding: 56px 0; }
+.halaman-judul h1 { font-size: 2.6rem; }
+.halaman-judul p { color: #cdd6ec; }
+.kotak-form {
+  background: var(--putih); border: 1px solid var(--garis); border-radius: var(--radius);
+  padding: 36px; max-width: 720px; margin-inline: auto;
+}
+.baris-dua { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ---------- FOOTER ---------- */
+footer { background: var(--hijau-tua); color: #cdd6ec; padding: 40px 0 24px; }
+.footer-isi {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px; padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+.footer-isi .logo { color: var(--putih); }
+.sosmed { display: flex; gap: 18px; list-style: none; }
+.sosmed a:hover { color: var(--aksen); }
+.hak-cipta { text-align: center; font-size: .85rem; padding-top: 18px; }
+
+/* ---------- RESPONSIF ---------- */
+@media (max-width: 860px) {
+  .hamburger { display: block; }
+  nav {
+    position: absolute; top: 68px; left: 0; right: 0;
+    background: var(--hijau-tua); max-height: 0; overflow: hidden;
+    transition: max-height .3s;
+  }
+  #menu-toggle:checked ~ nav { max-height: 400px; }
+  nav ul { flex-direction: column; padding: 10px 4%; }
+
+  .tentang-grid, .kontak-grid { grid-template-columns: 1fr; gap: 32px; }
+  .kartu-grid, .galeri-grid { grid-template-columns: 1fr 1fr; }
+  section { padding: 56px 0; }
+}
+
+@media (max-width: 560px) {
+  .kartu-grid, .galeri-grid, .baris-dua { grid-template-columns: 1fr; }
+  .kotak-form { padding: 22px; }
+  .tombol.garis { margin: 10px 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- HERO: KARTU ABSEN HARI INI ---------- */
+.hero-grid { display: grid; grid-template-columns: 1.25fr .85fr; gap: 56px; align-items: center; }
+.kartu-absen {
+  background: var(--putih); color: var(--teks);
+  border-radius: 14px; padding: 28px; border-top: 6px solid var(--aksen);
+}
+.kartu-absen h2 { font-size: 1.1rem; font-family: var(--font-isi); font-weight: 700; color: var(--teks-pudar); margin-bottom: 6px; }
+.kartu-absen .jam { font-family: var(--font-judul); font-size: 3.2rem; color: var(--hijau-tua); line-height: 1.1; }
+.kartu-absen .tgl { color: var(--teks-pudar); margin-bottom: 18px; }
+.kartu-absen dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; border-top: 1px solid var(--garis); padding-top: 16px; font-size: .95rem; }
+.kartu-absen dt { color: var(--teks-pudar); }
+.kartu-absen dd { font-weight: 700; color: var(--hijau-tua); }
+.kartu-absen .tombol { margin-top: 20px; width: 100%; text-align: center; }
+
+/* ---------- LANGKAH ABSEN (Tentang Kami) ---------- */
+.langkah { list-style: none; margin-top: 18px; display: grid; gap: 10px; counter-reset: l; }
+.langkah li { counter-increment: l; display: flex; gap: 12px; align-items: baseline; color: var(--teks); }
+.langkah li::before {
+  content: counter(l); flex: none; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--hijau-tua); color: var(--aksen); font-weight: 700; font-size: .85rem;
+  display: inline-grid; place-items: center;
+}
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero { padding: 60px 0; }
+}
